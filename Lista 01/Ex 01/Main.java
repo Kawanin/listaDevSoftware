@@ -4,16 +4,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("------------------------");
+        System.out.println("Bem vindo a Calculadora simples!");
         System.out.print("Informe o primeiro número: ");
         float num1 = leitor.nextFloat();
 
         System.out.println("------------------------");
 
-        System.out.print("Informe o segundo número: ");
+        System.out.print("Agora, informe o segundo número: ");
         float num2 = leitor.nextFloat();
 
-        System.out.println("------------------------");
+        System.out.println("\n------------------------");
 
         System.out.println("~ Resultados ~");    
         System.out.println(" "); 

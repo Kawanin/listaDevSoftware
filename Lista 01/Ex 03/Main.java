@@ -4,12 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("-------------------------");
-
-        System.out.println("~ Bem vindo ao sistema bancário simples! ~");
+        System.out.println("Bem vindo ao sistema bancário simples!");
         System.out.println(" ");
 
-        System.out.print("Por favor, o número da conta: ");
+        System.out.print("Por favor, informe o número da conta: ");
         int numeroConta = leitor.nextInt();
 
         leitor.nextLine();
@@ -23,15 +21,15 @@ public class Main {
 
         ContaBancaria conta = new ContaBancaria(numeroConta, nomeTitular);
 
-        System.out.println("-------------------------");
+        System.out.print("\n-------------------------");
 
-        System.out.print("Informe o valor que deseja depósitar: R$");
+        System.out.print("Qual o valor que deseja depósitar: R$");
         float valorDeposito = leitor.nextFloat();
         conta.depositar(valorDeposito);
 
         System.out.println(" ");
 
-        System.out.print("Informe o valor que deseja sacar: R$");
+        System.out.print("Agora, informe o valor que deseja sacar: R$");
         float valorSaque = leitor.nextFloat();
         conta.sacar(valorSaque);
 

@@ -5,6 +5,7 @@ public class Carro {
     private String placa;
     private int velocidadeAtual;
 
+
     public Carro(String marca, String modelo, int ano, String placa) {
         this.marca = marca;
         this.modelo = modelo;
@@ -13,9 +14,11 @@ public class Carro {
         this.velocidadeAtual = 0;
     }
 
+
     public void acelerar(int incrementoVelocidade) {
         this.velocidadeAtual += incrementoVelocidade;
     }
+
 
     public void frear(int decrementoVelocidade) {
         this.velocidadeAtual -= decrementoVelocidade;
@@ -24,6 +27,7 @@ public class Carro {
         }
     }
 
+    
     public void exibirInformacoes() {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);

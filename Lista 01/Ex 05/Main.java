@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("~Bem vindo ao evento aumototivo de clássicos!~");
+        System.out.println("Bem vindo ao evento aumototivo de clássicos!");
         System.out.println(" ");
 
         System.out.print("Qual a marca do seu carro?");
@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println(" ");
 
-        System.out.print("Certo, e o ano dele? ");
+        System.out.print("Por fim, o ano do veículo? ");
         int ano = leitor.nextInt();
 
         leitor.nextLine();

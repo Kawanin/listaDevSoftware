@@ -6,8 +6,7 @@ public class Main {
         Agenda agenda = new Agenda();
 
 
-        System.out.println("~ Bem-vindo à sua agenda de contatos! ~");
-        System.out.println("");
+        System.out.println("Bem-vindo à sua agenda de contatos!");
 
         while (true) {
             System.out.println("~ Escolha uma opção: ~");
@@ -23,17 +22,24 @@ public class Main {
                 case 1:
                     System.out.print("Nome do contato: ");
                     String nome = leitor.nextLine();
+
                     System.out.print("Telefone do contato: ");
                     String telefone = leitor.nextLine();
+
                     Contato novoContato = new Contato(nome, telefone);
+
                     agenda.adicionarContato(novoContato);
+
                     System.out.println("Contato adicionado com sucesso!");
-                    System.out.println();
+                    System.out.println("");
+
                     break;
                 case 2:
                     System.out.print("Digite o nome do contato a ser buscado: ");
                     String nomeBusca = leitor.nextLine();
+
                     Contato contatoEncontrado = agenda.buscarContatoPorNome(nomeBusca);
+
                     if (contatoEncontrado != null) {
                         System.out.println("Contato encontrado:");
                         System.out.println("Nome: " + contatoEncontrado.getNome());
@@ -41,14 +47,16 @@ public class Main {
                     } else {
                         System.out.println("Contato não encontrado.");
                     }
-                    System.out.println();
+
+                    System.out.println("");
+
                     break;
                 case 3:
                     System.out.println("Saindo do programa. Até a próxima!");
                     return;
                 default:
                     System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
-                    System.out.println();
+                    System.out.println("");
                     break;
             }
         }

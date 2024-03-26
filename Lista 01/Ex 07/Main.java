@@ -1,39 +1,49 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
+        List<Produto> estoque = new ArrayList<>();
 
-        System.out.println("~ Bem-vindo ao sistema de gerenciamento de estoque do mercado! ~");
-        System.out.println("");
-
-        System.out.println("Qual o nome do produto que deseja adicionar ao estoque?");
-        String nome = leitor.nextLine();
-
-        System.out.println("");
         
-        System.out.print("E qual o código dele: ");
-        int codigo = leitor.nextInt();
-
+        System.out.println("Bem-vindo ao sistema de gerenciamento de estoque do mercado!");
         System.out.println("");
 
-        System.out.print("Agora, o preço do produto: ");
-        double preco = leitor.nextDouble();
+        boolean verificador = true;
+        while (verificador) {
+            System.out.println("Selecione uma opção:");
+            System.out.println("1. Adicionar novo produto ao estoque");
+            System.out.println("2. Atualizar informações de um produto existente");
+            System.out.println("3. Remover produto do estoque");
+            System.out.println("4. Gerar relatório de estoque");
+            System.out.println("0. Sair do sistema");
+            System.out.print("Opção: ");
+            int opcao = leitor.nextInt();
+            leitor.nextLine(); // Limpar o buffer do leitor
 
-        System.out.println("");
-
-        System.out.print("Qual a quantidade desse produto em estoque? ");
-        int quantidadeEstoque = leitor.nextInt();
-        
-        leitor.nextLine();
-
-        Produto produto = new Produto(nome, codigo, preco, quantidadeEstoque);
-
-        System.out.println("Produto adicionado ao estoque:");
-        exibirInformacoesProduto(produto);
-
-        produto.exibirInformacoes();
+            switch (opcao) {
+                case 1:
+                    Produto.adicionarProdutoAoEstoque(leitor, estoque);
+                    break;
+                case 2:
+                    Produto.atualizarInformacoesProduto(leitor, estoque);
+                    break;
+                case 3:
+                    Produto.removerProdutoDoEstoque(leitor, estoque);
+                    break;
+                case 4:
+                    Produto.gerarRelatorioDeEstoque(estoque);
+                    break;
+                case 0:
+                    verificador = false;
+                    System.out.println("Saindo do sistema...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
+            }
+        }
     }
-
-   
-
+}

@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("------------------------");
+        System.out.println("Bem vindo a organizadora da biblioteca!");
 
         System.out.print("Digite os dados do Livro 1:");
 
@@ -50,11 +50,13 @@ public class Main {
         System.out.println("------------------------");
 
         System.out.println("Informações do Livro 1:");
+
         livro1.exibirInfo();
 
         System.out.println(" ");
 
         System.out.println("Informações do Livro 2:");
+        
         livro2.exibirInfo();
     }
 }

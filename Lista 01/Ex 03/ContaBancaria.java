@@ -9,6 +9,7 @@ public class ContaBancaria {
         this.saldo = 0.0f;
     }
 
+
     public void depositar(float valor) {
         if (valor > 0) {
             saldo += valor;
@@ -18,6 +19,7 @@ public class ContaBancaria {
         }
     }
 
+
     public void sacar(float valor) {
         if (valor > 0 && valor <= saldo) {
             saldo -= valor;
@@ -26,6 +28,7 @@ public class ContaBancaria {
             System.out.println("Saldo insuficiente ou valor de saque inválido.");
         }
     }
+
 
     public float consultarSaldo() {
         return saldo;

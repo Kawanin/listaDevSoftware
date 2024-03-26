@@ -4,9 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("-------------------------");
-
-        System.out.println("~ Bem vindo, jogador! ~");
+        System.out.println("Bem vindo, jogador!");
         System.out.println(" ");
 
         System.out.print("Qual o seu nick? ");
@@ -41,6 +39,7 @@ public class Main {
 
         System.out.println("~ Jogador:" + jogador.getNome() + "!");
         jogador.exibirInformacoes();
-
+        
+        System.out.println("-------------------------");
     }
 }
